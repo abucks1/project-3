@@ -16,7 +16,17 @@
 <% for (let i = 0; i < schedules.length; i++) { %>
     <div class="flexsch">
     <p><strong></strong><%=schedules[i].username%></p>
-    <p><strong></strong><%=schedules[i].day%></p>
+     
+    <% switch (schedules[i].day) {
+        case 1: %>Monday<% break;
+        case 2: %>Tuesday<% break;
+        case 3: %>Wednesday<% break;
+        case 4: %>Thursday<% break;
+        case 5: %>Friday<% break;
+        case 6: %>Saturday<% break;
+        case 7: %>Sunday<% break;
+        default: %><%=schedules[i].day %>
+        <% } %>
     <p><strong></strong><%=schedules[i].start_time%></p>
     <p><strong></strong><%=schedules[i].end_time%></p>
     </div>
