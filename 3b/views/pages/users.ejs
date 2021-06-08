@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mr. Coffee</title>
+</head>
+<body>
+    
+    <h3>List of current users</h2>
+        <% for (let i =0; i < users.length; i++) { %>
+          <p><strong>First name</strong> <%=users[i].firstname%></p>
+          <p><strong>Last name:</strong> <%=users[i].lastname%></p>
+          <p><strong>Email:</strong> <%=users[i].email%></p>
+        <% } %>
+      
+</body>
+</html>

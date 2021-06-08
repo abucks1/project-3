@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mr. Coffee</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <h2> WELCOME PLEASE FILL IN YOUR NEW SCHEDULES:</h2>
+    <form action="/schedules/new" method="post">
+        <div class = "flex">
+        <label for="user_id">Enter User Id</label>
+        <input id="user_id" type="text" name="user_id" >
+        <label for="day">Day</label>
+        <input id="day" type="text" name="day" >
+        <label for="Start_at">Start at</label>
+        <input id="Start_at" type="time" name="start_at" >
+        <label for="End_at">End at</label>
+        <input id="End_at" type="time" name="end_at" >
+        <input type="submit" value="OK">
+        </div>
+    </form>
+</body>
+</html>

@@ -57,7 +57,15 @@ app.get('/users/:id',(req, res) => {
 app.post('/schedules',(req, res) => {
     data.schedules.push(req.body)
     console.log(req.body);
-    res.send(req.body)
+    const newSchedules = {
+        user_id: req.body.user_id,
+        day: req.body.day,
+        start_at: req.body.start_at,
+        end_at: req.body.end_at,
+        }
+        data.users.push(newSchedules)
+        console.log(data.schedules)
+    res.send(data.schedules)
 
 })
 // Step 4: Add Donald Duck, encrypted password 

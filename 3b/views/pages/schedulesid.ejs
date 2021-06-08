@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mr. Coffee<</title>
+</head>
+<body>
+    <h2>Here is the Schedule for:</h2>
+    <% for ( let i = 0; i < schedules.length; i++) { %>
+    <p><strong>User Id:</strong> <%=schedules[i].user_id%></p>
+    <p><strong>Day:</strong> <%=schedules[i].day%></p>
+    <p><strong>Start at:</strong> <%=schedules[i].start_at%></p>
+    <p><strong>End at:</strong> <%=schedules[i].end_at%></p>
+   <% } %>
+
+    
+</body>
+</html>
+
+
