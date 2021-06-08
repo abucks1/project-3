@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mr. Coffee</title>
+    <link rel="stylesheet" href="/style.css">
+<head>
+    <%- include('../partials/header'); %>
+</head>
+<body>
+
+<h3> Here are all the schedules</h3>
+<% for (let i = 0; i < schedules.length; i++) { %>
+    <div class="flexsch">
+    <p><strong>ID:</strong> <%=schedules[i].id%></p>    
+    <p><strong>User Name:</strong><%=schedules[i].username%></p>
+    <p><strong>Day:</strong><%=schedules[i].day%></p>
+    <p><strong>Start Time:</strong><%=schedules[i].start_time%></p>
+    <p><strong>End Time:</strong><%=schedules[i].end_time%></p>
+    </div>
+<% } %>
+<div class =flexsch>
+<a href="/new"><button >Add new schedules</button></a>
+<a href="/view"><button >View all current schedules</button></a>
+</div>
+</body>
+<footer>
+    <%- include('../partials/footer'); %>
+</footer>
+
+</html>

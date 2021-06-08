@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mr. Coffee</title>
+    <link rel="stylesheet" href="/style.css">
+
+    <head>
+        <%- include('../partials/header'); %>
+    </head>
+    
+    <body>
+    <form action="/new" method="post">
+        <div class = "flex">
+            <h2>Please add your schedule</h2>
+
+        <label for="username">Enter a username:</label>
+        <input id="username" type="text" name="username" pattern="[A-Za-z]{8}" title= "Max 8 letters" ><br>
+        
+        <label for="day">Enter day number: 0 = Sunday 6 = Saturday</label>
+        <input id="day" type="number" name="day" min="0" max="6" ><br>
+        
+        <label for="start_time">Enter Start time:</label>
+        <input id="start_time" type="time" name="start_time"required ><br>
+        
+        <label for="end_time">Enter End time:</label>
+        <input id="end_time" type="time" name="end_time" required><br>
+    
+        
+        <input id ="submit" type="submit" value="Submit">
+
+        </div>
+        </form>
+        <a href="/view"><button id = "new">View all current schedules</button></a>
+
+</body>
+<footer>
+    <%- include('../partials/footer'); %>
+</footer>
+</html>
